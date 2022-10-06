@@ -14,7 +14,19 @@ class Header extends React.Component {
    
     return (
       <div>       
-       
+      <nav className="navbar">
+      <ul className="dashbrdnav">
+        <li>
+          <a>HOME</a>
+        </li>
+        <li>
+          <a>SHOES</a>
+        </li>
+        <li>
+          <a>ABOUT</a>
+        </li>
+      </ul>
+    </nav>
       </div>
     );
   }

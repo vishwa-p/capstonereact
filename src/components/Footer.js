@@ -11,9 +11,24 @@ class Footer extends React.Component {
 
   render() {
     const { project } = this.state;
-    return (<div>
-    
-    </div>
+    return (
+      <div>
+        <div className="c-footer-legal c-footer--raised">
+          <h1><a href="">ShoeFactory</a></h1>
+          <p className="ftrp">@2022-2023 The Shoe Group Inc. All rights reserved.</p>
+          <ul className="ftr">
+            <li>
+              <a href="">HOME</a>
+            </li>
+            <li>
+              <a href="">SHOES</a>
+            </li>
+            <li>
+              <a href="">ABOUT</a>
+            </li>
+          </ul>
+        </div>
+      </div>
     );
   }
 }

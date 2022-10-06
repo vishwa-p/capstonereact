@@ -13,20 +13,7 @@ class Dashboard extends React.Component {
 
   render() {
     return (
-      <div>
-        <nav className="navbar">
-          <ul className="dashbrdnav">
-            <li>
-              <a>HOME</a>
-            </li>
-            <li>
-              <a>SHOES</a>
-            </li>
-            <li>
-              <a>ABOUT</a>
-            </li>
-          </ul>
-        </nav>
+      <div>        
         <div className="c-editorial-top-story__header">
           <div className="c-editorial-top-story__header-headings">
             <h1 className="c-heading c-cms-module-header c-cms-module-header--has-small-padding">

@@ -275,8 +275,13 @@
 
 a {
   text-decoration: none;
+  color: antiquewhite;
+  font-size: 1.4rem;
 }
-
+.ftrp{
+  margin-top: 20px;
+  margin-left: 20px;
+}
 .c-editorial {
   background-color: #fff;
   margin-left: auto;
@@ -400,6 +405,36 @@ img {
 }
 .c-markdown{
   margin-left: -53px;
+}
+.c-footer-legal {
+  width: 100vw;
+  display: flex;
+  margin-top: 100px;
+}
+.c-footer-legal {
+  padding-bottom: 1.875rem;
+  padding-top: 1.875rem;
+}
+.c-footer-legal h1{
+  margin-left: 15px;
+}
+.c-footer-legal {
+  background-color: #3a2e2c;
+  color: #fff;
+  padding-bottom: 1.25rem;
+  padding-top: 1.75rem;
+}
+.ftr{
+  display: flex;
+  margin-left: 400px;
+}
+.ftr li{
+  list-style-type: none;
+  padding: 10px;
+ 
+}
+.ftr li a:hover { 
+  color: #b36c60;
 }
 @keyframes App-logo-spin {
   from {
