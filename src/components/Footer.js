@@ -12,7 +12,7 @@ class Footer extends React.Component {
   render() {
     const { project } = this.state;
     return (<div>
-    <h1>footer...</h1>
+    
     </div>
     );
   }

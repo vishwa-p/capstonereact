@@ -53,22 +53,24 @@ function Login() {
   
   return (
     <div className="form">
-      <form>
+    <div className="loginf">
+      <form className="loginform">
         <div className="input-container">
-          <label>Email </label>
-          <input type="text" name="email" required  onChange={(e) => setemail(e.target.value)} />
+         
+          <input type="text" name="email" className="email" required  onChange={(e) => setemail(e.target.value)} placeholder="Enter Email"/>
         </div>
         <div className="input-container">
-          <label>Password </label>
-          <input type="password" name="pass" required onChange={(e) => setpassword(e.target.value)} />
+         
+          <input type="password" name="pass" className="password" required onChange={(e) => setpassword(e.target.value)} placeholder="Enter Password" />
         </div>
         {isAuthorised &&
         <div >Invalid UserName or Password.</div>
         }
         <div className="button-container">
-          <input type="submit" onClick={handleClick} />
+          <input type="submit" className="submitbtn" onClick={handleClick} />
         </div>
       </form>
+      </div>
     </div>
   );
 }

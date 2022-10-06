@@ -14,7 +14,7 @@ class Header extends React.Component {
    
     return (
       <div>       
-        hi
+       
       </div>
     );
   }

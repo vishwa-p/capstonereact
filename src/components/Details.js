@@ -12,7 +12,7 @@ class Details extends React.Component {
   render() {
     const { project } = this.state;
     return (<div>
-    <h1>details...</h1>
+   
     </div>
     );
   }
