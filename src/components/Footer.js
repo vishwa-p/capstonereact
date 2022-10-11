@@ -18,10 +18,10 @@ class Footer extends React.Component {
           <p className="ftrp">@2022-2023 The Shoe Group Inc. All rights reserved.</p>
           <ul className="ftr">
             <li>
-              <a href="">HOME</a>
+              <a href="/dashboard">HOME</a>
             </li>
             <li>
-              <a href="">SHOES</a>
+              <a href="/shoelist">SHOES</a>
             </li>
             <li>
               <a href="">ABOUT</a>

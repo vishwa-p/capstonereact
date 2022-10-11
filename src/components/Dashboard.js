@@ -4,12 +4,7 @@ import axios from "axios";
 import ReactPlayer from "react-player";
 
 class Dashboard extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      project: [],
-    };
-  }
+  
 
   render() {
     return (

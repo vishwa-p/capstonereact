@@ -278,10 +278,12 @@ a {
   color: antiquewhite;
   font-size: 1.4rem;
 }
-.ftrp{
+
+.ftrp {
   margin-top: 20px;
   margin-left: 20px;
 }
+
 .c-editorial {
   background-color: #fff;
   margin-left: auto;
@@ -358,84 +360,103 @@ img {
   display: flex;
   flex-direction: column-reverse;
 }
+
 .c-editorial .c-editorial-banner-text .c-heading.c-editorial-banner-text__title {
   font-size: 2.25rem;
   font-weight: 100;
   line-height: 2.25rem;
 }
+
 .c-editorial .c-editorial-banner-text .c-editorial-banner-text__description:not(:last-child) {
   padding-bottom: 1.875rem;
 }
+
 /* @media (min-width: 68.75em) */
 .c-editorial .c-editorial-banner-text .c-editorial-banner-text__description {
   font-size: 1rem;
   line-height: 1.375rem;
 }
+
 .c-editorial .c-editorial-banner-text .c-editorial-banner-text__description {
   font-size: .875rem;
   font-weight: 100;
   line-height: 1.25rem;
 }
+
 /* @media (min-width: 68.75em) */
 .c-editorial .c-editorial-banner-text .c-editorial-banner-text__description {
   font-size: 1rem;
   line-height: 1.5;
 }
+
 .c-editorial .c-editorial-banner-text .c-editorial-banner-text__description {
   font-size: 1.25rem;
   line-height: 1.5rem;
   margin: 0 0 1.875rem;
 }
-.cele{
+
+.cele {
   display: flex;
-  
+
 }
-.cele h1, .cele img{
+
+.cele h1, .cele img {
   margin: auto;
   text-align: center;
   color: #3a2e2c;
 }
-.cele h1 span{
+
+.cele h1 span {
   font-size: 1.1rem;
   margin-left: 61px;
-  
+
 }
-.imgcele{
+
+.imgcele {
   padding-right: 45px;
 }
-.c-markdown{
+
+.c-markdown {
   margin-left: -53px;
 }
+
 .c-footer-legal {
   width: 100vw;
   display: flex;
   margin-top: 100px;
 }
+
 .c-footer-legal {
   padding-bottom: 1.875rem;
   padding-top: 1.875rem;
 }
-.c-footer-legal h1{
+
+.c-footer-legal h1 {
   margin-left: 15px;
 }
+
 .c-footer-legal {
   background-color: #3a2e2c;
   color: #fff;
   padding-bottom: 1.25rem;
   padding-top: 1.75rem;
 }
-.ftr{
+
+.ftr {
   display: flex;
   margin-left: 400px;
 }
-.ftr li{
+
+.ftr li {
   list-style-type: none;
   padding: 10px;
- 
+
 }
-.ftr li a:hover { 
+
+.ftr li a:hover {
   color: #b36c60;
 }
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
@@ -444,4 +465,95 @@ img {
   to {
     transform: rotate(360deg);
   }
+}
+
+.dashbrdnav li a {
+  color: brown;
+}
+
+.shoebody {
+  display: flex;
+  margin-top: 50px;
+  margin-left: 50px;
+  font-family: "Patron,sans-serif";
+
+}
+
+.shoebody h1 {
+  font-size: 50px;
+  color: rgb(77, 78, 78);
+  font-weight: 300;
+  line-height: 1;
+  margin: 90px;
+
+}
+
+.shoebody img {
+  transition: transform .2s;
+}
+
+.shoebody img:hover {
+  transform: scale(1.1);
+
+}
+
+.shoebody h1 p {
+  font-size: 25px;
+}
+
+.shoelist {
+  /* display: flex; */
+  margin-left: 40px;
+  margin-top: 20px;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+/* .shoelist img:hover {
+  width: 400px;
+  height: 300px;
+} */
+.shoe {
+  border: 2px solid #b36c60;
+  border-radius: 10px;
+  background-color: #ece4e3;
+}
+
+.shoeimg, .shoehead {
+  /* border:2px solid blue; */
+  margin: auto;
+  padding-top: 35px;
+  text-align: center;
+}
+
+.shoehead {
+  color: rgb(90, 10, 240);
+}
+
+.shoe img {
+  margin: auto;
+  text-align: center;
+}
+
+.des, .shoetype, .shoeprice {
+  width: 80%;
+  margin-left: 50px;
+  padding-left: 10px;
+}
+
+.shoetype, .shoeprice {
+  font-size: 1.24rem;
+  color: tomato;
+  font-weight: 300;
+}
+
+.des {
+  font: 1.2em;
+  color: brown;
+}
+
+.type, .shoetype {
+  display: inline-block;
 }

@@ -17,13 +17,13 @@ class Header extends React.Component {
       <nav className="navbar">
       <ul className="dashbrdnav">
         <li>
-          <a>HOME</a>
+          <a href="/dashboard">HOME</a>
         </li>
         <li>
-          <a>SHOES</a>
+          <a href="/shoelist">SHOES</a>
         </li>
         <li>
-          <a>ABOUT</a>
+          <a href="/about">ABOUT</a>
         </li>
       </ul>
     </nav>

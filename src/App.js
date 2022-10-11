@@ -4,10 +4,11 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Dashboard from "./components/Dashboard";
-import Details from "./components/Details";
+
 import Login from "./components/Login";
 import Register from "./components/Register";
 import ShoeList from "./components/ShoeList";
+import About from "./components/About";
 function App() {
   return (
     <div className="App">
@@ -16,7 +17,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Dashboard />} />
           <Route path="/login" element={<Login />} />
-          <Route path="/details" element={<Details />} />
+          <Route path="/about" element={<About />} />
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/register" element={<Register />} />
           <Route path="/shoelist" element={<ShoeList />} />

@@ -1,12 +1,15 @@
 import React from "react";
 import axios from "axios";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { Navigate, redirect } from "react-router-dom";
 function Register() {
     const [first, setfirst] = useState("");
     const [last, setlast] = useState("");
     const [email, setemail] = useState("");
+    const navigate = useNavigate();
     const [password, setpassword] = useState("");
-    
+    const [isAuthorised, setisAuthorised] = useState("");
     let handleSubmit = async (e) => {
       e.preventDefault();
       try {
@@ -26,7 +29,8 @@ function Register() {
           setlast("");
           setemail("");
           setpassword("");
-          
+          navigate("/dashboard");
+          setisAuthorised(true);
         //   setMessage("User created successfully");
         } else {
         //   setMessage("Some error occured");
