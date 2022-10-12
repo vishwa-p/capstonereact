@@ -24,7 +24,7 @@ function Register() {
           }),
         });        
         let resJson = await res.json();
-        if (res.status === 200) {
+        if (res.status === 201) {
           setfirst("");
           setlast("");
           setemail("");

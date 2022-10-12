@@ -1,18 +1,15 @@
 import React from "react";
 import axios from "axios";
+import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 
-class Footer extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      project: [],
-    };
-  }
-
-  render() {
-    const { project } = this.state;
+function Footer()  {
+  var hideHeaderPaths = ['/login','/register','/'];
+  const { pathname } = useLocation(); 
+  console.log(pathname);
     return (
-      <div>
+      
+     <div>
+     {!hideHeaderPaths.includes(pathname) &&
         <div className="c-footer-legal c-footer--raised">
           <h1><a href="">ShoeFactory</a></h1>
           <p className="ftrp">@2022-2023 The Shoe Group Inc. All rights reserved.</p>
@@ -28,8 +25,12 @@ class Footer extends React.Component {
             </li>
           </ul>
         </div>
+     }
       </div>
+    
+      
+    
     );
   }
-}
+
 export default Footer;

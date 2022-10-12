@@ -14,7 +14,7 @@ function Login() {
   const navigate = useNavigate();
   const [email, setemail] = useState("");
   const [password, setpassword] = useState("");
-  const [isAuthorised, setisAuthorised] = useState("");
+  const [isAuthorised, setisAuthorised] = useState(true);
   async function handleClick(e) {
   
     e.preventDefault();
@@ -29,11 +29,13 @@ function Login() {
       });
       let resJson = await res.json();
       if (res.status === 200) {       
-        if(resJson.data="Yes"){          
+        if(resJson.data=="Yes"){    
+          console.log("if..")      
           navigate("/dashboard");
           setisAuthorised(true);
         }
         else{
+          console.log("else..")
           setisAuthorised(false);
         }
         setemail("");
@@ -63,8 +65,8 @@ function Login() {
          
           <input type="password" name="pass" className="password" required onChange={(e) => setpassword(e.target.value)} placeholder="Enter Password" />
         </div>
-        {isAuthorised &&
-        <div >Invalid UserName or Password.</div>
+        {!isAuthorised &&
+        <div className="error">Invalid UserName or Password.</div>
         }
         <div className="button-container">
           <input type="submit" className="submitbtn" onClick={handleClick} />

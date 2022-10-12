@@ -1,19 +1,14 @@
 import React from "react";
 import axios from "axios";
+import {useLocation } from "react-router-dom";
 
 
-class Header extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      project: [],
-    };
-  }
-
-  render() {
-   
+function Header() {
+  var hideHeaderPaths = ['/login','/register','/'];
+  const { pathname } = useLocation();
     return (
-      <div>       
+      <div>
+      {!hideHeaderPaths.includes(pathname) &&       
       <nav className="navbar">
       <ul className="dashbrdnav">
         <li>
@@ -25,10 +20,13 @@ class Header extends React.Component {
         <li>
           <a href="/about">ABOUT</a>
         </li>
+        <li>
+        <button><a href="/login">Logout</a></button>
+        </li>
       </ul>
     </nav>
+      }
       </div>
     );
   }
-}
 export default Header;
