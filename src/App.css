@@ -72,7 +72,7 @@
   width: 500px;
   height: 500px;
   text-align: center;
-  background-image: url("https://i.ibb.co/zPFnrq8/imageedit-1-3492026641.png");
+  /* background-image: url("https://i.ibb.co/zPFnrq8/imageedit-1-3492026641.png"); */
   background-position: center center;
   background-size: 100%;
   background-repeat: no-repeat;
@@ -109,16 +109,26 @@
   background-color: darkgrey;
   transition: transform .7s ease-in-out;
 }
+.signups{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 20px;
+  color: darkcyan;
+}
+.log{
+  color: brown;
+}
 /* 
 .submitbtn:hover {
   transform: rotate(360deg);
 } */
-
-.submitbtn:hover {
+.newuser{
+  color: crimson;
+}
+/* .submitbtn:hover {
   background-color: burlywood;
   width: 40%;
   height: 60px;
-}
+} */
 
 .regis {
   width: 30%;
@@ -130,12 +140,12 @@
   margin-top: 10px;
 }
 
-.regis:hover {
+/* .regis:hover {
   transform: rotate(360deg);
   background-color: burlywood;
   width: 40%;
   height: 60px;
-}
+} */
 
 .loginform input {
   margin-top: 40px;
@@ -531,12 +541,19 @@ img {
 .shoehead {
   color: rgb(90, 10, 240);
 }
-
+.logout{
+  margin-right: 890px;
+  border: none;
+  outline: none;
+}
 .shoe img {
   margin: auto;
   text-align: center;
 }
-
+.already{
+  font-size: 20px;
+  color: #6b2f25;
+}
 .des, .shoetype, .shoeprice {
   width: 80%;
   margin-left: 50px;

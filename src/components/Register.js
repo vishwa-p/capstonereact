@@ -70,7 +70,7 @@ function Register() {
             onChange={(e) => setemail(e.target.value)}
           /><br></br>
           <input
-            type="text"
+            type="password"
             value={password}
             name="password"
             placeholder="Password"
@@ -79,8 +79,9 @@ function Register() {
           />
           <br></br>
           <button type="submit" className="regis">Register</button>
-  
-        
+  <br></br>
+  <br></br>
+        <span className="already">Already have an account? <a href="/login" className="log">Login</a></span>
         </form>
         </div>
       </div>

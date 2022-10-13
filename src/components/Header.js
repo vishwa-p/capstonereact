@@ -21,7 +21,7 @@ function Header() {
           <a href="/about">ABOUT</a>
         </li>
         <li>
-        <button><a href="/login">Logout</a></button>
+        <button className="logout"><a href="/login">Logout</a></button>
         </li>
       </ul>
     </nav>

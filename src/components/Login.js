@@ -56,7 +56,9 @@ function Login() {
   return (
     <div className="form">
     <div className="loginf">
+    
       <form className="loginform">
+      <h2>Login</h2>
         <div className="input-container">
          
           <input type="text" name="email" className="email" required  onChange={(e) => setemail(e.target.value)} placeholder="Enter Email"/>
@@ -70,8 +72,10 @@ function Login() {
         }
         <div className="button-container">
           <input type="submit" className="submitbtn" onClick={handleClick} />
-        </div>
+        </div><br></br>
+        <span className="signups"><a href="/register" className="newuser">Sign Up with Us</a></span>
       </form>
+      
       </div>
     </div>
   );
