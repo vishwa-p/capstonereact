@@ -579,3 +579,39 @@ img {
   color: red;
   font-weight: bold;
 }
+.about h2{
+  margin-top: 10px;
+  color: darkred;
+  animation-duration: 3s;
+  animation-name: slidein;
+  animation-iteration-count: infinite;
+}
+@keyframes slidein {
+  from {
+    margin-left: 100%;
+    width: 300%;
+  }
+
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+}
+.about{
+  margin: auto;
+  text-align: center;
+  background:rgb(250, 250, 246);
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.about p{
+  text-align: justify;
+  padding: 35px;
+  color: rgb(95, 4, 4);
+  background-color:rgb(240, 238, 235);
+}
+.abtimg{
+  width: 85%;
+  height: 500px;
+  margin: auto;
+  text-align: center;
+}
