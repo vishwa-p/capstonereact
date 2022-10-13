@@ -19,11 +19,11 @@ class Dashboard extends React.Component {
               designed with pillowy soles for dreamy comfort.
             </p>
           </div>
-          <div className="c-editorial-top-story__header-ctas">
-            <a className="u-btn u-btn--tertiary u-btn--is-small c-editorial-top-story__cta">
+          <div className="c-editorial-top-story__header-ctas">          
+            <a href="https://www.googleadservices.com/pagead/aclk?sa=L&ai=DChcSEwiR1de7vt36AhX1yJQJHfo1DwMYABABGgJ5bQ&ohost=www.google.com&cid=CAESbOD2swwZVe9pSCB9UYH-tF_Qf5rOCPHP3WHYplcS6oPTTjqkYazEgTB9RpSr9SPg8XekVMfH0n3WhtfFsrjFB0qp65Ou-BWh65Gnh1g0Uz_E3ZuWB8l3z2Qs2DohvXAj5T24RubN-kERDh2P9g&sig=AOD64_31BJfuiPgjxCQqMC4DDTPRkkxF8Q&q&adurl&ved=2ahUKEwjItc-7vt36AhW2lYkEHaayDa4Q0Qx6BAgFEAE" className="u-btn u-btn--tertiary u-btn--is-small c-editorial-top-story__cta" target="blank">
               Shop women's heels
             </a>
-            <a className="u-btn u-btn--tertiary u-btn--is-small c-editorial-top-story__cta">
+            <a href="https://www.aldoshoes.com.sg/blog/about-pillow-walk-technology-style-with-comfortable-heels-sandals" className="u-btn u-btn--tertiary u-btn--is-small c-editorial-top-story__cta" target="blank">
               Learn More
             </a>
           </div>
@@ -37,10 +37,11 @@ class Dashboard extends React.Component {
         <div className="c-editorial">
           <div className="c-editorial__wrapper o-container c-editorial__wrapper-with-text c-editorial__wrapper-text-and-image">
             <div className="c-editorial__wrap-image">
-              <img
+           <img
                 src="https://i.ibb.co/CP4GDdh/bg.jpg"
                 className="lazyautosizes ls-is-cached lazyloaded"
               ></img>
+           
             </div>
             <div className="c-editorial-banner-text">
               <div className="c-editorial-banner-text__wrapper-title">
