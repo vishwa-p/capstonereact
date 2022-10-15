@@ -1,6 +1,9 @@
-import React from "react";
+import React, { Component } from 'react';
 import axios from "axios";
 import imgfile from "../images/mainbg.webp";
+import CanvasJSReact from './canvasjs.react';
+var CanvasJS = CanvasJSReact.CanvasJS;
+var CanvasJSChart = CanvasJSReact.CanvasJSChart;
 class Details extends React.Component {
   constructor(props) {
     super(props);
@@ -13,7 +16,7 @@ class Details extends React.Component {
       url: "https://vishwapcapstonelaravel.herokuapp.com/api/shoes",
       method: "GET",
     }).then((res) => {
-      console.log("shoelist:", res.data);
+      // console.log("shoelist:", res.data);
       this.setState({
         shoelist: res.data,
       });
@@ -21,6 +24,30 @@ class Details extends React.Component {
   }
   render() {
     const { shoelist } = this.state;
+    const options = {
+			exportEnabled: true,
+			animationEnabled: true,
+			title: {
+				text: "Shoe Collection"
+			},
+			data: [{
+				type: "pie",
+				startAngle: 75,
+				toolTipContent: "<b>{label}</b>: {y}%",
+				showInLegend: "true",
+				legendText: "{label}",
+				indexLabelFontSize: 16,
+				indexLabel: "{label} - {y}%",
+				dataPoints: [
+					{ y: 18, label: "Sports" },
+					{ y: 49, label: "Boots" },
+					{ y: 9, label: "Walking" },
+					{ y: 5, label: "Running" },
+					{ y: 19, label: "Football" }
+				]
+			}]
+      
+		}
     return (
       <div>
         <img src={imgfile}></img>
@@ -36,6 +63,9 @@ class Details extends React.Component {
           </h1>
         </div>
         <br></br>
+        <CanvasJSChart options = {options}
+				/* onRef={ref => this.chart = ref} */
+			/>
         <section className="shoelist ">         
           {shoelist.map((shoe) => (
             <div className="shoe" key={shoe.id}>             
