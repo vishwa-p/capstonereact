@@ -510,7 +510,13 @@ img {
 .shoebody h1 p {
   font-size: 25px;
 }
-
+.cart{
+  display: flex;
+  
+}
+.cart1{
+  padding-left: 330px;
+}
 .shoelist {
   /* display: flex; */
   margin-left: 40px;

@@ -1,7 +1,9 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 import axios from "axios";
 import imgfile from "../images/mainbg.webp";
-import CanvasJSReact from './canvasjs.react';
+import CanvasJSReact from "./canvasjs.react";
+import { Button, Popup, Icon } from "semantic-ui-react";
+import "semantic-ui-css/semantic.min.css";
 var CanvasJS = CanvasJSReact.CanvasJS;
 var CanvasJSChart = CanvasJSReact.CanvasJSChart;
 class Details extends React.Component {
@@ -25,29 +27,30 @@ class Details extends React.Component {
   render() {
     const { shoelist } = this.state;
     const options = {
-			exportEnabled: true,
-			animationEnabled: true,
-			title: {
-				text: "Shoe Collection"
-			},
-			data: [{
-				type: "pie",
-				startAngle: 75,
-				toolTipContent: "<b>{label}</b>: {y}%",
-				showInLegend: "true",
-				legendText: "{label}",
-				indexLabelFontSize: 16,
-				indexLabel: "{label} - {y}%",
-				dataPoints: [
-					{ y: 18, label: "Sports" },
-					{ y: 49, label: "Boots" },
-					{ y: 9, label: "Walking" },
-					{ y: 5, label: "Running" },
-					{ y: 19, label: "Football" }
-				]
-			}]
-      
-		}
+      exportEnabled: true,
+      animationEnabled: true,
+      title: {
+        text: "Shoe Collection",
+      },
+      data: [
+        {
+          type: "pie",
+          startAngle: 75,
+          toolTipContent: "<b>{label}</b>: {y}%",
+          showInLegend: "true",
+          legendText: "{label}",
+          indexLabelFontSize: 16,
+          indexLabel: "{label} - {y}%",
+          dataPoints: [
+            { y: 18, label: "Sports" },
+            { y: 49, label: "Boots" },
+            { y: 9, label: "Walking" },
+            { y: 5, label: "Running" },
+            { y: 19, label: "Football" },
+          ],
+        },
+      ],
+    };
     return (
       <div>
         <img src={imgfile}></img>
@@ -63,27 +66,57 @@ class Details extends React.Component {
           </h1>
         </div>
         <br></br>
-        <CanvasJSChart options = {options}
-				/* onRef={ref => this.chart = ref} */
-			/>
-        <section className="shoelist ">         
+        <CanvasJSChart
+          options={options}
+          /* onRef={ref => this.chart = ref} */
+        />
+        <section className="shoelist ">
           {shoelist.map((shoe) => (
-            <div className="shoe" key={shoe.id}>             
+            <div className="shoe" key={shoe.id}>
               <img
                 src={shoe.photo}
                 alt="shoeimg"
-                width={300}              
+                width={300}
                 height={300}
                 className="shoeimg"
-              ></img><br></br>
-              <h5 className="shoehead">{shoe.name} </h5>
-              <span className="shoeprice" dangerouslySetInnerHTML={{ __html: shoe.price }}></span><br></br>
-              <span className="shoetype" dangerouslySetInnerHTML={{ __html: shoe.type }}></span>
-              <p className="des" dangerouslySetInnerHTML={{ __html: shoe.description }}></p>
+              ></img>
               <br></br>
+              <h5 className="shoehead">{shoe.name} </h5>
+              <span
+                className="shoeprice"
+                dangerouslySetInnerHTML={{ __html: shoe.price }}
+              ></span>
+              <br></br>
+              <span
+                className="shoetype"
+                dangerouslySetInnerHTML={{ __html: shoe.type }}
+              ></span>
+              <p
+                className="des"
+                dangerouslySetInnerHTML={{ __html: shoe.description }}
+              ></p>
+              <br></br>
+              <div className="cart">
+              <div>
+              <Popup
+                trigger={
+                  <Icon name="heart" color="red" size="large" circular />
+                }
+                content="Put me in wishlist"
+                position="top right"
+              />
+              </div>
+              <div className="cart1">
+              <Popup
               
+                trigger={<Button icon="add" />}
+                content="Add to cart."
+                basic
+              />
+              </div>
+              </div>
             </div>
-          ))}          
+          ))}
         </section>
       </div>
     );
