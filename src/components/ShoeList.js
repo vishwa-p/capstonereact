@@ -4,6 +4,7 @@ import imgfile from "../images/mainbg.webp";
 import CanvasJSReact from "./canvasjs.react";
 import { Button, Popup, Icon } from "semantic-ui-react";
 import "semantic-ui-css/semantic.min.css";
+import { type } from "@testing-library/user-event/dist/type";
 var CanvasJS = CanvasJSReact.CanvasJS;
 var CanvasJSChart = CanvasJSReact.CanvasJSChart;
 class Details extends React.Component {
@@ -11,21 +12,41 @@ class Details extends React.Component {
     super(props);
     this.state = {
       shoelist: [],
+      filteredlist: []
     };
+    this.filterlist = this.filterlist.bind(this);
   }
   componentDidMount() {
     axios({
       url: "https://vishwapcapstonelaravel.herokuapp.com/api/shoes",
       method: "GET",
     }).then((res) => {
-      // console.log("shoelist:", res.data);
+      console.log("shoelist:", res.data);
       this.setState({
         shoelist: res.data,
       });
+      this.filterlist('');
     });
+    
   }
+
+  filterlist(query) {
+    // e.preventdefault();
+    var test = [];
+    this.state.shoelist.filter(x => x.type.includes(query)).map(filteredName => (
+      test.push(filteredName)
+    ))
+
+    // test = this.state.shoelist.filter(function (str) { return str.includes('Sports'); });
+    this.setState({
+      filteredlist: test,
+    });
+    console.log(test);
+    
+  }
+
   render() {
-    const { shoelist } = this.state;
+    const { shoelist,filteredlist } = this.state;
     const options = {
       exportEnabled: true,
       animationEnabled: true,
@@ -70,8 +91,16 @@ class Details extends React.Component {
           options={options}
           /* onRef={ref => this.chart = ref} */
         />
+        <div className="filterbtn">
+        <button className="button-86" onClick={this.filterlist.bind(this,'Walking')}>Walking</button>
+        <button className="button-86" onClick={this.filterlist.bind(this,'Running')}>Running</button>
+        <button className="button-86" onClick={this.filterlist.bind(this,'Boot')}>Boots</button>
+        <button className="button-86" onClick={this.filterlist.bind(this,'Sports')}>Sports</button>
+        <button className="button-86" onClick={this.filterlist.bind(this,'Football')}>Football</button>
+        <button className="button-86" onClick={this.filterlist.bind(this,'')}>ALL</button>
+        </div>
         <section className="shoelist ">
-          {shoelist.map((shoe) => (
+          {filteredlist.map((shoe) => (
             <div className="shoe" key={shoe.id}>
               <img
                 src={shoe.photo}
